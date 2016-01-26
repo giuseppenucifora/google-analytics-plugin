@@ -30,7 +30,7 @@
 	/* NSLog(@"successfully started GAI tracker"); */
 }
 
-- (void) enableCampaign: (CDVInvokedUrlCommand*)command {
+- (void) allowIDFACollection: (CDVInvokedUrlCommand*)command {
 	bool enabled = [[command.arguments objectAtIndex:0] boolValue];
 	
 	NSLog(@"Enable Analytics Campaing : %@",(enabled ? @"YES" : @"NO"))

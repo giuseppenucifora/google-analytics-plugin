@@ -13,7 +13,7 @@
 
 - (void) startTrackerWithId: (CDVInvokedUrlCommand*)command;
 - (void) setUserId: (CDVInvokedUrlCommand*)command;
-- (void) enableCampaign: (CDVInvokedUrlCommand*)command;
+- (void) allowIDFACollection: (CDVInvokedUrlCommand*)command;
 - (void) debugMode: (CDVInvokedUrlCommand*)command;
 - (void) enableUncaughtExceptionReporting: (CDVInvokedUrlCommand*)command;
 - (void) addCustomDimension: (CDVInvokedUrlCommand*)command;
