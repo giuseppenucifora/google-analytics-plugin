@@ -33,7 +33,7 @@
 - (void) allowIDFACollection: (CDVInvokedUrlCommand*)command {
 	bool enabled = [[command.arguments objectAtIndex:0] boolValue];
 	
-	NSLog(@"Enable Analytics Campaing : %@",(enabled ? @"YES" : @"NO"))
+	NSLog(@"Enable Analytics Campaing : %@",(enabled ? @"YES" : @"NO"));
 	[[[GAI sharedInstance] defaultTracker] setAllowIDFACollection:enabled];
 }
 
@@ -197,7 +197,7 @@
 	
 	
 	[tracker set:kGAIScreenName value:screenName];
-	[tracker send:[[GAIDictionaryBuilder createAppView] build]];
+	[tracker send:[[GAIDictionaryBuilder createScreenView] build]];
 	
 	pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
 	[self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
