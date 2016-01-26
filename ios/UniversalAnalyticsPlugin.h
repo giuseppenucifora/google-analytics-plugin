@@ -1,18 +1,19 @@
-//UniversalAnalyticsPlugin.h
-//Created by Daniel Wilson 2013-09-19
+	//UniversalAnalyticsPlugin.h
+	//Created by Daniel Wilson 2013-09-19
 
 #import <Foundation/Foundation.h>
 #import <Cordova/CDV.h>
 #import "GAI.h"
 
 @interface UniversalAnalyticsPlugin : CDVPlugin {
-    bool _trackerStarted;
-    bool _debugMode;
+	bool _trackerStarted;
+	bool _debugMode;
 	NSMutableDictionary *_customDimensions;
 }
 
 - (void) startTrackerWithId: (CDVInvokedUrlCommand*)command;
 - (void) setUserId: (CDVInvokedUrlCommand*)command;
+- (void) enableCampaign: (CDVInvokedUrlCommand*)command;
 - (void) debugMode: (CDVInvokedUrlCommand*)command;
 - (void) enableUncaughtExceptionReporting: (CDVInvokedUrlCommand*)command;
 - (void) addCustomDimension: (CDVInvokedUrlCommand*)command;
